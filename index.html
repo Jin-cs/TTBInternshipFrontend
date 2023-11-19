@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="style.css">
+    
+<body>
+    <div class="container" >
+        <main>
+            <img src="image/logoGoogle.png" alt="google"><br>
+            <input type="text" id="text" ><br>
+            <button onclick="Palindrome()">Verify palindrome</button>
+            <p id="ans"></p>
+            <script>
+                function Palindrome(){
+                    var text = document.getElementById("text").value;
+                    for (var i=0; i<=text.length/2; i++){
+                        if (text[i] != text[text.length-i-1]){ 
+                            document.getElementById("ans").innerHTML = text + " is not Palindrome";
+                            return false;
+                        }  
+                    }
+                    document.getElementById("ans").innerHTML = text +" is Palindrome";
+                    return true;
+                }
+            </script>
+        </main>  
+    </div>
+    
+</body>
+</html>
